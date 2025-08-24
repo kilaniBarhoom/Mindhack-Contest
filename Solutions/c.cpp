@@ -22,13 +22,8 @@ ll mod = 1000000007;
 void solve() {
     int a, b, c;
     cin >> a >> b >> c;
-    if(a == b) {
-        cout << c << "\n";
-    } else if(b == c) {
-          cout << a << "\n";
-    } else {
-        cout << b << "\n";
-    }
+    
+    cout << (a == b ? c : (b == c ? a : b)) << "\n";
 }
 
 
