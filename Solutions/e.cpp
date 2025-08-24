@@ -20,19 +20,17 @@ ll mod = 1000000007;
 
 
 void solve() {
-   int n;
+  int n;
   cin >> n;
 
   char mx = 'A';
-for(int i = 0; i < n; i++) {
-    char c;
-    cin >> c;
-    mx = max(c, mx); 
-}
+  for(int i = 0; i < n; i++) {
+      char c;
+      cin >> c;
+      mx = max(c, mx); 
+  }
 
-cout << mx - 'a' + 1 << "\n";
-
-
+  cout << mx - 'a' + 1 << "\n";
 }
 
 
