@@ -34,7 +34,7 @@ void solve() {
     sort(all(v));
 
     for(int i = 0; i < n; i++) {
-        if(a[i] == v[n -1]) {
+        if(a[i] == v[n - 1]) {
             cout << a[i] - v[n - 2] << " ";
         } else {
             cout << a[i] - v[n - 1] << " ";
