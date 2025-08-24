@@ -22,15 +22,13 @@ ll mod = 1000000007;
 void solve() {
     int n;
     cin >> n;
-
-   
+    
     vll v(n), a(n);
     for(int i = 0; i < n; i++) {
         cin >> v[i];
         a[i] = v[i];
     }
-
-
+    
     sort(all(v));
 
     for(int i = 0; i < n; i++) {
