@@ -1,76 +1,26 @@
-
-#include <bits/stdc++.h>
-
-#define go ios::sync_with_stdio(0);cin.tie(0)
-#define srv(v) sort(v.begin(), v.end())
-#define yes cout<<"YES"<<endl
-#define no cout<<"NO"<<endl
-#define vi vector<int>
-#define vll vector<ll>
-#define vl vector<l>
-
-typedef long l;
-typedef long long  ll;
-typedef long long int lli;
-typedef unsigned long long ull;
-
-constexpr auto PI = 3.14159265358979323846;
-
+#include<bits/stdc++.h>
 using namespace std;
+typedef long long ll;
+typedef long double ld;
+typedef vector<int> vi;
+typedef vector<ll> vll;
+#define sortv(v) sort(v.begin(), v.end())
+#define sortrev(v) sort(v.begin(), v.end(), greater<int>())
+#define LST ios_base::sync_with_stdio(false); cin.tie(0); cout.tie(0);
+#define pb push_back
+#define all(v) v.begin(),v.end()
+#define f1(i,n) for(int i=0;i<n;i++)
+#define fin(ele,v) for(auto &ele:v)
+#define fout(ele,v) for(auto ele:v)
+#define yes cout<<"YES"<<endl;
+#define no cout<<"NO"<<endl;
+#define sz(X) (ll)((X).size())
+
+ll mod = 1000000007;
 
 
-bool isPrime(ll n) {
-    if (n == 1)
-        return false;
-    if (n == 2)
-        return true;
-    for (int i = 2; i <= sqrt(n); i++) {
-        if (n % i == 0)
-            return false;
-    }
-    return true;
-}
-
-ll smallestDiv(ll n) {
-    for (int i = 2; i <= sqrt(n); i++) {
-        if (n % i == 0) {
-            return i;
-        }
-    }
-    return n;
-}
-
-lli binaryToDecimal(string binary) {
-    lli decimal = 0;
-    int power = 0;
-
-    for (int i = binary.length() - 1; i >= 0; i--) {
-        if (binary[i] == '1') {
-            decimal += pow(2, power);
-        }
-        power++;
-    }
-    return decimal;
-}
-
-bool binarySearch(vector<ll>& a, ll target) {
-    ll left = 0, right = a.size() - 1;
-    while (left <= right) {
-        ll mid = left + (right - left) / 2;
-        if (a[mid] == target) {
-            return true;
-        } else if (a[mid] > target) {
-            right = mid - 1;
-        } else left = mid + 1;
-    }
-    return false;
-}
-
-int main() {
-    go;
-    int t; cin >> t;
-    while(t--){
-        int n; cin >> n;
+void solve() {
+    int n; cin >> n;
 
         vi v(n);
         for(auto &e : v) cin >> e;
@@ -114,5 +64,14 @@ int main() {
             cout << ans << " ";
         }
         cout << endl;
-    }
+}
+
+
+
+ int main() {
+    ios_base::sync_with_stdio(false);cout.tie(0);cin.tie(0);
+    int t=1;
+    cin >> t;
+    while(t--)
+        solve();
 }
